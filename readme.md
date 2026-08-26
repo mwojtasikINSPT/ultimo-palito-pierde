@@ -68,12 +68,18 @@ El programa cuenta con un diseño modular compuesto por 11 funciones independien
 
 
 
-### 6. 🚀Compilación y Ejecución
+### 6. 🚀 Compilación y Ejecución
 
 Para compilar y ejecutar el proyecto desde la terminal utilizando GCC:
 
 **Compilar el código fuente**
-gcc -o ultimoPalito ultimoPalito.c
 
-**Ejecutar el programa**
+```bash
+gcc -o ultimoPalito ultimoPalito.c
+```
+
+**Compilar el código fuente**
+
+```bash
 ./ultimoPalito
+```
