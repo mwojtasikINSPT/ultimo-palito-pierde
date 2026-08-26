@@ -395,7 +395,7 @@ int pedirEntero(const char *mensajeError)
             {
                 if (buffer[i] < '0' || buffer[i] > '9')
                 {
-                    valido = 0; // Encontre un caracter que no es un digito (letra, simbolo, espacio)
+                    valido = 0; // Algún caracter no es un digito
                     break;
                 }
                 i++;
