@@ -14,9 +14,9 @@ Dos jugadores (o un Jugador vs. CPU) se turnan para retirar entre 1 y $N$ palito
 
 ---
 
-## 🧠 Conceptos de C Aplicados
+##  👩🏽‍💻Conceptos de C Aplicados
 
-### 1. Pila Dinámica (LIFO - *Last In, First Out*)
+### 1. 📚Pila Dinámica (LIFO - *Last In, First Out*)
 La pila se modela como una lista enlazada simple donde todas las inserciones y eliminaciones ocurren en el **tope**.
 
 * **Nodos Dinámicos:** Cada palito del juego representa una estructura `nodo` asignada dinámicamente.
@@ -29,13 +29,13 @@ La pila se modela como una lista enlazada simple donde todas las inserciones y e
 * **Comportamiento LIFO:** Los palitos agregados al inicio (`apilar`) quedan en la cima de la pila y son los primeros en ser removidos (`desapilar`) durante los turnos.  
 
 
-### 2. Gestión Explícita de Memoria (`malloc` y `free`)
+### 2. 🧠Gestión Explícita de Memoria (`malloc` y `free`)
 
 * **Reserva de Memoria:** Al iniciar la partida o configurar la pila, se utiliza `malloc(sizeof(nodo))` para crear los palitos en la memoria **Heap**, evitando desperdiciar memoria estática.
 * **Liberación Segura de Memoria:** Durante la ejecución (al desapilar) y al terminar la partida (`vaciarPila`), se libera la memoria de cada nodo con `free()` mediante variables auxiliares para **prevenir Fugas de Memoria (*Memory Leaks*) y Punteros Colgantes (*Dangling Pointers*)**.
 
 
-### 3. Punteros Dobles (`nodo**`)
+### 3. 🪆Punteros Dobles (`nodo**`)
 
 Para lograr una modularización real fuera del `main`, las funciones que modifican la estructura de la pila reciben la dirección del puntero del tope (puntero a puntero):
 
@@ -43,12 +43,12 @@ Para lograr una modularización real fuera del `main`, las funciones que modific
 * Evita la pérdida del estado de la pila al salir del ámbito de las funciones de manipulación.
 
 
-### 4. Robustez en la Entrada de Datos (Validación de Buffer)
+### 4. ⌨️ Robustez en la Entrada de Datos (Validación de Buffer)
 
 Se implementó una función personalizada `pedirEntero()` que reemplaza el uso frágil de `scanf()` por `fgets()` y `atoi()`. Esto previene ciclos infinitos (*bucle por error de lectura*) ante entradas no numéricas o saltos de línea vacíos (`Enter`).
 
 
-### 5.🛠️ Estructura de Funciones (Modularidad) 
+### 5. 🛠️ Estructura de Funciones (Modularidad) 
              
 El programa cuenta con un diseño modular compuesto por 11 funciones independientes:
 
@@ -67,12 +67,13 @@ El programa cuenta con un diseño modular compuesto por 11 funciones independien
 | **Lógica del Juego** | `jugarVsCPU(int, int)` | Controla el flujo de juego frente a la computadora (movimientos mediante `rand()`). |
 
 
-### 🚀 Compilación y Ejecución
+
+### 6. 🚀Compilación y Ejecución
 
 Para compilar y ejecutar el proyecto desde la terminal utilizando GCC:
 
-# Compilar el código fuente
+**Compilar el código fuente**
 gcc -o ultimoPalito ultimoPalito.c
 
-# Ejecutar el programa
+**Ejecutar el programa**
 ./ultimoPalito
